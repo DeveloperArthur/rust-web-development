@@ -27,7 +27,7 @@ pub async fn check_profanity(content: String) -> Result<String, handle_errors::E
     let client = reqwest::Client::new();
     let res = client
         .post("https://api.apilayer.com/bad_words?censor_character=*")
-        .header("apikey", "gK8OCBZtC0Z6mJqPYtbhQfpVOGiu7jTZ")
+        .header("apikey", "qPYtbhQfpVOGiu7jTZgK8OCBZtC0Z6mJ")
         .body(content)
         .send()
         .await
