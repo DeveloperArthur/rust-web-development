@@ -1,0 +1,17 @@
+workspace = { members = ["handle-errors"] }
+[package]
+name = "rust-web-development"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = { version = "0.11", features = ["json"] }
+tokio = { version = "1.2", features = ["full"] }
+warp = "0.3"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+# Podemos omitir número de versões para imports locais
+handle-errors = { path = "handle-errors" }
+sqlx = { version = "0.5", features = [ "runtime-tokio-rustls", "migrate", "postgres" ]}
